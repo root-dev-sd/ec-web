@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<IntroPage />} />
+        <Route path="/" element={<IntroPage />} end/>
         <Route element={<HomePageLayout />}>
           <Route path="home" element={<Home />} />
           <Route path="services" element={<Services />} />

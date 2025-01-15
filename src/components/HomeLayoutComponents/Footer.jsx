@@ -1,9 +1,15 @@
+import { NavLink } from "react-router";
+
 const Footer = () => {
   return (
     <>
       <nav className="flex flex-row justify-around bg-emerald-500 p-1">
-        <div className="flex flex-col items-center text-slate-200 text-xs font-bold">
-          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-slate-100">
+        <NavLink
+          to="/more"
+          end
+          className="flex flex-col items-center text-white text-xs font-bold transition-all duration-700 focus:-translate-y-4"
+        >
+          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-white">
             <svg
               height="24px"
               viewBox="0 -960 960 960"
@@ -14,9 +20,14 @@ const Footer = () => {
             </svg>
           </div>
           <span>More</span>
-        </div>
-        <div className="flex flex-col items-center text-slate-200 text-xs font-bold">
-          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-slate-100">
+        </NavLink>
+
+        <NavLink
+          to="/records"
+          end
+          className="flex flex-col items-center text-white text-xs font-bold transition-all duration-700 focus:-translate-y-4"
+        >
+          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-white">
             <svg
               height="24px"
               viewBox="0 -960 960 960"
@@ -27,9 +38,14 @@ const Footer = () => {
             </svg>
           </div>
           <span>Records</span>
-        </div>
-        <div className="flex flex-col items-center text-slate-200 text-xs font-bold">
-          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-slate-100">
+        </NavLink>
+
+        <NavLink
+          to="/schedule"
+          end
+          className="flex flex-col items-center text-white text-xs font-bold transition-all duration-700 focus:-translate-y-4"
+        >
+          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-white">
             <svg
               height="24px"
               viewBox="0 -960 960 960"
@@ -40,9 +56,14 @@ const Footer = () => {
             </svg>
           </div>
           <span>Schedule</span>
-        </div>
-        <div className="flex flex-col items-center text-slate-200 text-xs font-bold">
-          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-slate-100">
+        </NavLink>
+
+        <NavLink
+          to="/services"
+          end
+          className="flex flex-col items-center text-white text-xs font-bold transition-all duration-700 focus:-translate-y-4"
+        >
+          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-white">
             <svg
               height="24px"
               viewBox="0 -960 960 960"
@@ -53,9 +74,14 @@ const Footer = () => {
             </svg>
           </div>
           <span>Services</span>
-        </div>
-        <div className="flex flex-col items-center text-slate-200 text-xs font-bold">
-          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-slate-100">
+        </NavLink>
+
+        <NavLink
+          to="/home"
+          end
+          className="flex flex-col items-center text-white text-xs font-bold transition-all duration-700 focus:-translate-y-4"
+        >
+          <div className="flex justify-center items-center w-8 h-8 rounded-full bg-white">
             <svg
               height="24px"
               viewBox="0 -960 960 960"
@@ -66,7 +92,7 @@ const Footer = () => {
             </svg>
           </div>
           <span>Home</span>
-        </div>
+        </NavLink>
       </nav>
       <footer className="flex flex-col text-center text-[1ch] text-gray-400">
         <span>more services</span>
