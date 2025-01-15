@@ -1,6 +1,7 @@
 const Services = () => {
   return (
-    <div className="flex-1">
+    <div className="flex-1 flex flex-col items-center">
+      <span className="text-lg text-cyan-600 font-bold my-5">Services</span>
       <div className="flex flex-row flex-wrap justify-evenly mt-4 gap-y-5">
         <div className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col">
           <svg version="1.1" id="svg181" width="75.072044" height="110.756">
@@ -59,9 +60,7 @@ const Services = () => {
             </g>
           </svg>
 
-          <span className="pt-1 text-lg font-bold text-slate-400">
-            Wallet
-          </span>
+          <span className="pt-1 text-lg font-bold text-slate-400">Wallet</span>
         </div>
         <div className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col">
           <svg version="1.1" id="svg252" width="93.723351" height="90.545006">
