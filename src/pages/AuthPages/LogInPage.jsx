@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AtSign, Phone, Lock, Eye, EyeOff } from "lucide-react";
 import axios from "axios";
 
@@ -12,13 +12,7 @@ const LogIn = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const api = axios.create({
-    baseURL: `${import.meta.env.VITE_API_URL}/login`,
-    timeout: 5000,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
@@ -50,15 +44,20 @@ const LogIn = () => {
     if (validateForm()) {
       try {
         // Here you would typically make an API call to your backend
-        const response = await api.post(
-          loginMethod === "email" ? "/email" : "/phone",
-          formData
-        );
+        const response = {};
         console.log("Form submitted:", {
           loginMethod,
           ...formData,
           response,
         });
+        if (loginMethod === "phone") {
+          if (
+            formData.emailOrPhone === `${import.meta.env.VITE_PHONE_NUMBER}` &&
+            formData.password === `${import.meta.env.VITE_PASSWORD}`
+          ) {
+            navigate("/home");
+          }
+        }
       } catch (error) {
         console.error("Login error:", error);
       }
@@ -158,7 +157,7 @@ const LogIn = () => {
               value={formData.password}
               onChange={handleInputChange}
               placeholder="Enter your password"
-              className={`w-full pl-10 pr-12 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400${
+              className={`w-full pl-10 pr-12 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 ${
                 errors.password ? "border-red-500" : "border-gray-300"
               }`}
             />
