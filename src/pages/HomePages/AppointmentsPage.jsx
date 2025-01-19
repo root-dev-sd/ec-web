@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import SearchField from "../../components/UtilComponents/SearchField";
 
 const Appointments = () => {

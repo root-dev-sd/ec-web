@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import { User, AtSign, Phone, Lock, Eye, EyeOff } from "lucide-react";
 import axios from "axios";
 
