@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 const Home = () => {
   return (
     <div className="flex-1">
@@ -47,7 +49,10 @@ const Home = () => {
       </div>
 
       <div className="flex flex-row flex-wrap justify-evenly mt-4 gap-y-5">
-        <div className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col">
+        <NavLink
+          to="appointments"
+          className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col"
+        >
           <svg version="1.1" id="svg129" width="85.392982" height="85.89666">
             <g
               id="g137"
@@ -65,8 +70,10 @@ const Home = () => {
               />
             </g>
           </svg>
-          <span className="pt-1 text-lg mt-3 font-bold text-slate-400">Appointments</span>
-        </div>
+          <span className="pt-1 text-lg mt-3 font-bold text-slate-400">
+            Appointments
+          </span>
+        </NavLink>
         <div className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col">
           <svg version="1.1" id="svg58400" width="102" height="107">
             <defs id="defs58404">
@@ -104,7 +111,9 @@ const Home = () => {
               />
             </g>
           </svg>
-          <span className="pt-1 text-lg font-bold text-slate-400">Pharmacy</span>
+          <span className="pt-1 text-lg font-bold text-slate-400">
+            Pharmacy
+          </span>
         </div>
         <div className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col">
           <svg version="1.1" id="svg58464" width="119" height="100">
@@ -137,7 +146,9 @@ const Home = () => {
               />
             </g>
           </svg>
-          <span className="pt-1 text-lg font-bold text-slate-400">Home visits</span>
+          <span className="pt-1 text-lg font-bold text-slate-400">
+            Home visits
+          </span>
         </div>
         <div className="p-3 w-2/5 flex justify-center items-center rounded-lg shadow-[0px_4px_6px_rgba(0,0,0,0.1)] flex-col">
           <svg version="1.1" id="svg58496" width="109" height="104">
@@ -152,7 +163,9 @@ const Home = () => {
               />
             </g>
           </svg>
-          <span className="pt-1 text-lg font-bold text-slate-400">Laboratory</span>
+          <span className="pt-1 text-lg font-bold text-slate-400">
+            Laboratory
+          </span>
         </div>
       </div>
     </div>
